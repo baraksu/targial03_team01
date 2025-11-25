@@ -12,4 +12,7 @@ public class Encryption
         System.out.println("Welcome to the Encryption / Decryption Program");
         
     }
+    public static int add (int a, int b){
+        return a+b;
+    }
 }

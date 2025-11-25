@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+
 /**
  * Write a description of class EncryptionTester here.
  *
@@ -16,4 +17,5 @@ public class EncryptionTester
         assertEquals(5,result);
         
     }
+    
 }

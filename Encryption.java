@@ -12,21 +12,17 @@ public class Encryption
         else 
             System.out.println("ERROR - no such option");
     }
-    }
-   public static String replace(){
-        Scanner reader = new Scanner(System.in);
-        String str = reader.nextLine();
-        str.replace('u' , '&');
-        str.replace('o' , '0');
-        str.replace('i' , '1');
-        str.replace('e' , '#');
-        str.replace('a' , '@');
+    
+   public static String replace(String str){
+        str = str.replace('u' , '&');
+        str = str.replace('o' , '0');
+        str = str.replace('i' , '1');
+        str = str.replace('e' , '#');
+        str = str.replace('a' , '@');
         return str;
         
     }
-public static String str (){
-        Scanner reader = new Scanner(System.in);
-        String str = reader.nextLine();
+public static String str (String str){
         str = str.replace('@' , 'a');
         str = str.replace('0' , 'o');
         str = str.replace('#' , 'e');

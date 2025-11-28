@@ -52,5 +52,17 @@ public class EncryptionTester
         assertEquals("ubc",result);
         
     }
+    @Test
+    public void testAdd(){
+        
+        String result = Encryption.replace("abu");
+        assertEquals("@b&",result);
+        
+    }
+    @Test 
+        public void test2(){
+            String result = Encryption.replace("onion");
+            assertEquals("0n10n",result);
+        }
     
 }

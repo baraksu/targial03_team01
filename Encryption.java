@@ -15,7 +15,7 @@ public class Encryption
     }
    public static String replace(){
         Scanner reader = new Scanner(System.in);
-        String str = reader.next();
+        String str = reader.nextLine();
         str.replace('u' , '&');
         str.replace('o' , '0');
         str.replace('i' , '1');
@@ -25,8 +25,8 @@ public class Encryption
         
     }
 public static String str (){
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
+        Scanner reader = new Scanner(System.in);
+        String str = reader.nextLine();
         str = str.replace('@' , 'a');
         str = str.replace('0' , 'o');
         str = str.replace('#' , 'e');

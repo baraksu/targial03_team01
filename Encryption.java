@@ -13,7 +13,15 @@ public class Encryption
             System.out.println("ERROR - no such option");
     }
     }
-    public static int add (int a, int b){
-        return a+b ;
+   public static String replace(){
+        Scanner reader = new Scanner(System.in);
+        String str = reader.next();
+        str.replace('u' , '&');
+        str.replace('o' , '0');
+        str.replace('i' , '1');
+        str.replace('e' , '#');
+        str.replace('a' , '@');
+        return str;
+        
     }
 }

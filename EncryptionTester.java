@@ -17,5 +17,40 @@ public class EncryptionTester
         assertEquals(5,result);
         
     }
+    @Test
+    public void testAdd(){
+        
+        String result = Encryption.replace("0bc");
+        assertEquals("obc",result);
+        
+    }
+    @Test
+    public void test2(){
+        
+        String result = Encryption.replace("@bc");
+        assertEquals("abc",result);
+        
+    }
+    @Test
+    public void test3(){
+        
+        String result = Encryption.replace("#bc");
+        assertEquals("ebc",result);
+        
+    }
+    @Test
+    public void test4(){
+        
+        String result = Encryption.replace("1bc");
+        assertEquals("ibc",result);
+        
+    }
+    @Test
+    public void test5(){
+        
+        String result = Encryption.replace("&bc");
+        assertEquals("ubc",result);
+        
+    }
     
 }

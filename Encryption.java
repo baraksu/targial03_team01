@@ -24,4 +24,14 @@ public class Encryption
         return str;
         
     }
+public static String str (){
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        str = str.replace('@' , 'a');
+        str = str.replace('0' , 'o');
+        str = str.replace('#' , 'e');
+        str = str.replace('1' , 'i');
+        str = str.replace('&' , 'u');
+        return str;
+    }
 }

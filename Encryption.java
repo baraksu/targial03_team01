@@ -12,7 +12,6 @@ public class Encryption
         else 
             System.out.println("ERROR - no such option");
     }
-    
    public static String replace(String str){
         str = str.replace('u' , '&');
         str = str.replace('o' , '0');
@@ -20,7 +19,6 @@ public class Encryption
         str = str.replace('e' , '#');
         str = str.replace('a' , '@');
         return str;
-        
     }
 public static String str (String str){
         str = str.replace('@' , 'a');

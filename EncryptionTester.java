@@ -99,6 +99,31 @@ public class EncryptionTester
             String result = Encryption.replace("i am saghi");
             assertEquals("am saghi i",result);
         }
+                           @Test 
+        public void test26(){
+            String result = Encryption.replace("");
+            assertEquals("",result);
+        }
+    @Test 
+        public void test27(){
+            String result = Encryption.replace("hey zylberg");
+            assertEquals("zylberg hey",result);
+        }
+    @Test 
+        public void test28(){
+            String result = Encryption.replace("roni is gooding");
+            assertEquals("gooding roni is",result);
+        }
+    @Test 
+        public void test29(){
+            String result = Encryption.replace("whatsapp web");
+            assertEquals("web whatsapp",result);
+        }
+    @Test 
+        public void test30(){
+            String result = Encryption.replace("i am steve");
+            assertEquals("steve i am",result);
+        }
         @Test 
         public void test31(){
             String result = Encryption.charright("eitan azran");

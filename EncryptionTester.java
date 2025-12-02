@@ -99,4 +99,29 @@ public class EncryptionTester
             String result = Encryption.replace("i am saghi");
             assertEquals("am saghi i",result);
         }
+        @Test 
+        public void test31(){
+            String result = Encryption.charright("eitan azran");
+            assertEquals("aneit anazr",result);
+        }
+    @Test 
+        public void test32(){
+            String result = Encryption.charright("eitan");
+            assertEquals("neita",result);
+        }
+    @Test 
+        public void test33(){
+            String result = Encryption.charright("eitan azran hameleh");
+            assertEquals("lehei tanazr anhame",result);
+        }
+    @Test     
+        public void test34(){
+            String result = Encryption.charright("yakir");
+            assertEquals("ryaki",result);
+        }
+    @Test 
+        public void test35(){
+            String result = Encryption.charright("yakir papkin");
+            assertEquals("inyak irpapk",result);
+        }
 }

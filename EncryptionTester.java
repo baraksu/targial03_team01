@@ -178,11 +178,6 @@ public class EncryptionTester
             String result = Encryption.charright("eitan azran");
             assertEquals("aneit anazr",result);
         }
-        @Test 
-        public void test31(){
-            String result = Encryption.charright("eitan azran");
-            assertEquals("aneit anazr",result);
-        }
     @Test 
         public void test32(){
             String result = Encryption.charright("eitan");

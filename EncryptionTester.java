@@ -74,4 +74,29 @@ public class EncryptionTester
             String result = Encryption.replace("qreuba");
             assertEquals("qr#&b@",result);
         }
+            @Test 
+        public void test16(){
+            String result = Encryption.replace("think");
+            assertEquals("think",result);
+        }
+    @Test 
+        public void test17(){
+            String result = Encryption.replace("banana tomato");
+            assertEquals("tomato banana",result);
+        }
+    @Test 
+        public void test18(){
+            String result = Encryption.replace("lets go hike");
+            assertEquals("go hike lets",result);
+        }
+    @Test 
+        public void test19(){
+            String result = Encryption.replace("whats up");
+            assertEquals("up whats",result);
+        }
+    @Test 
+        public void test20(){
+            String result = Encryption.replace("i am saghi");
+            assertEquals("am saghi i",result);
+        }
 }

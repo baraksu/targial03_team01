@@ -74,6 +74,31 @@ public class EncryptionTester
             String result = Encryption.replace("qreuba");
             assertEquals("qr#&b@",result);
         }
+           @Test 
+        public void test11(){
+            int result = Encryption.countWords("i am zylberg");
+            assertEquals(3,result);
+        }
+    @Test 
+        public void test12(){
+            int result = Encryption.countWords("i am");
+            assertEquals(2,result);
+        }
+    @Test 
+        public void test13(){
+           int result = Encryption.countWords("i");
+            assertEquals(1,result);
+        }
+    @Test 
+        public void test14(){
+            int result = Encryption.countWords("");
+            assertEquals(0,result);
+        }
+    @Test 
+        public void test15(){
+            int result = Encryption.countWords("azran is melech");
+            assertEquals(3,result);
+        }
             @Test 
         public void test16(){
             String result = Encryption.replace("think");

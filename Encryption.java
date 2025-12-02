@@ -12,6 +12,40 @@ public class Encryption
         else 
             System.out.println("ERROR - no such option");
     }
+    public static void countWords(String sentence, int wordsSoFar) {
+        sentence = sentence.trim();
+        if (sentence.isEmpty()) {
+            System.out.println("מספר המילים במשפט: " + wordsSoFar);
+            return;
+        }
+        if (wordsSoFar >= 3 && sentence.contains(" ")) {
+            System.out.println("שגיאה: אסור להכניס יותר מ-3 מילים");
+            return;
+        }
+        int firstSpaceIndex = sentence.indexOf(' ');
+        if (firstSpaceIndex == -1) {
+            wordsSoFar++;
+            if (wordsSoFar > 3) {
+                System.out.println("שגיאה: אסור להכניס יותר מ-3 מילים");
+            } else {
+                System.out.println("מספר המילים במשפט: " + wordsSoFar);
+            }
+            return;
+        }
+        String remaining = sentence.substring(firstSpaceIndex + 1);
+        countWords(remaining, wordsSoFar + 1);
+    }
+    public static String shiftWordsRight(String sentence, int shiftCount) {
+        sentence = sentence.trim();
+        if (sentence.isEmpty() || shiftCount <= 0)
+            return sentence;
+        int lastSpaceIndex = sentence.lastIndexOf(' ');
+        if (lastSpaceIndex == -1 || shiftCount == 0)
+            return sentence;
+        String lastWord = sentence.substring(lastSpaceIndex + 1);
+        String remainingSentence = sentence.substring(0, lastSpaceIndex);
+        return shiftWordsRight(lastWord + " " + remainingSentence, shiftCount - 1);
+    }
    public static String replace(String str){
         str = str.replace('u' , '&');
         str = str.replace('o' , '0');

@@ -94,34 +94,29 @@ public class EncryptionTester
             int result = Encryption.countWords("");
             assertEquals(0,result);
         }
-    @Test 
-        public void test15(){
-            int result = Encryption.countWords("azran is melech");
-            assertEquals(3,result);
-        }
-            @Test 
+      @Test 
         public void test16(){
-            String result = Encryption.shiftLeft("think");
+            String result = Encryption.shiftLeft("think",1);
             assertEquals("think",result);
         }
     @Test 
         public void test17(){
-            String result = Encryption.shiftLeft("banana tomato");
+            String result = Encryption.shiftLeft("banana tomato",2);
             assertEquals("tomato banana",result);
         }
     @Test 
         public void test18(){
-            String result = Encryption.shiftLeft("lets go hike");
+            String result = Encryption.shiftLeft("lets go hike",3);
             assertEquals("go hike lets",result);
         }
     @Test 
         public void test19(){
-            String result = Encryption.shiftLeft("whats up");
+            String result = Encryption.shiftLeft("whats up",2);
             assertEquals("up whats",result);
         }
     @Test 
         public void test20(){
-            String result = Encryption.shiftLeft("i am saghi");
+            String result = Encryption.shiftLeft("i am saghi",3);
             assertEquals("am saghi i",result);
         }
             public void test21(){

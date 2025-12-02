@@ -69,7 +69,7 @@ public static String replace1(String str){
         str = str.replace('&' , 'u');
         return str;
     }
-     public static String shiftLeft(String str, int senLength){
+    public static String shiftLeft(String str, int senLength){
     if(senLength==1)return str;
     else if(senLength==2){
         String firstWord=str.substring(0,str.indexOf(" "));
@@ -83,6 +83,8 @@ public static String replace1(String str){
         String thirdWord=str.substring(secondSpace+1);
         return secondWord+" "+thirdWord+" "+firstWord;
     }
+}
+
     public static String movingLetters(String str){
         int length1 = str.length();
         int d = str.indexOf(" ");

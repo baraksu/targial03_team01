@@ -125,28 +125,33 @@ public class EncryptionTester
         } 
                            @Test 
         public void test26(){
-            String result = Encryption.replace("");
-            assertEquals("",result);
+            String result = Encryption.shiftWordsRight("sahgi and noam",3);
+            assertEquals("noam sahgi and",result);
         }
     @Test 
         public void test27(){
-            String result = Encryption.replace("hey zylberg");
+            String result = Encryption.shiftWordsRight("hey zylberg",2);
             assertEquals("zylberg hey",result);
         }
     @Test 
         public void test28(){
-            String result = Encryption.replace("roni is gooding");
+            String result = Encryption.shiftWordsRight("roni is gooding",3);
             assertEquals("gooding roni is",result);
         }
     @Test 
         public void test29(){
-            String result = Encryption.replace("whatsapp web");
+            String result = Encryption.shiftWordsRight("whatsapp web",2);
             assertEquals("web whatsapp",result);
         }
     @Test 
         public void test30(){
-            String result = Encryption.replace("i am steve");
+            String result = Encryption.shiftWordsRight("i am steve",3);
             assertEquals("steve i am",result);
+        }
+        @Test 
+        public void test31(){
+            String result = Encryption.charright("eitan azran");
+            assertEquals("aneit anazr",result);
         }
         @Test 
         public void test31(){

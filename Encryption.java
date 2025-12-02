@@ -35,16 +35,20 @@ public class Encryption
         String remaining = sentence.substring(firstSpaceIndex + 1);
         countWords(remaining, wordsSoFar + 1);
     }
-    public static String shiftWordsRight(String sentence, int shiftCount) {
-        sentence = sentence.trim();
-        if (sentence.isEmpty() || shiftCount <= 0)
+     public static String shiftWordsRight(String sentence, int senLength){ 
+        if (senLength == 1)
             return sentence;
-        int lastSpaceIndex = sentence.lastIndexOf(' ');
-        if (lastSpaceIndex == -1 || shiftCount == 0)
-            return sentence;
-        String lastWord = sentence.substring(lastSpaceIndex + 1);
-        String remainingSentence = sentence.substring(0, lastSpaceIndex);
-        return shiftWordsRight(lastWord + " " + remainingSentence, shiftCount - 1);
+        else if (senLength == 2){
+            String firstWord = sentence.substring(0, sentence.indexOf(" "));
+            String lastWord = sentence.substring(sentence.indexOf(" ") + 1);
+            return lastWord + " " + firstWord;
+        }
+        else{
+            int indexOfLastSpace = sentence.lastIndexOf(" ");
+            String thirdWord = sentence.substring(indexOfLastSpace + 1);
+            String besideThirdWord = sentence.substring(0, indexOfLastSpace);
+            return thirdWord + " " + besideThirdWord;
+        }
     }
    public static String replace(String str){
         str = str.replace('u' , '&');

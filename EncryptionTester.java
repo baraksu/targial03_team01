@@ -15,35 +15,35 @@ public class EncryptionTester
    @Test
     public void test1(){
         
-        String result = Encryption.str("0bc");
+        String result = Encryption.replace1("0bc");
         assertEquals("obc",result);
         
     }
     @Test
     public void test2(){
         
-        String result = Encryption.str("@bc");
+        String result = Encryption.replace1("@bc");
         assertEquals("abc",result);
         
     }
     @Test
     public void test3(){
         
-        String result = Encryption.str("#bc");
+        String result = Encryption.replace1("#bc");
         assertEquals("ebc",result);
         
     }
     @Test
     public void test4(){
         
-        String result = Encryption.str("1bc");
+        String result = Encryption.replace1("1bc");
         assertEquals("ibc",result);
         
     }
     @Test
     public void test5(){
         
-        String result = Encryption.str("&bc");
+        String result = Encryption.replace1("&bc");
         assertEquals("ubc",result);
         
     }

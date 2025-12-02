@@ -28,4 +28,23 @@ public static String str (String str){
         str = str.replace('&' , 'u');
         return str;
     }
+    public static String shiftLeft(String input) {
+    
+        if (!input.contains(" ")) {
+            return input;
+        }
+
+        int firstSpace = input.indexOf(" ");
+        int lastSpace = input.lastIndexOf(" ");
+
+       
+        if (firstSpace == lastSpace) {
+            String first = input.substring(0, firstSpace);
+            String second = input.substring(firstSpace + 1);
+            return second + " " + first;
+        }
+        String firstWord = input.substring(0, firstSpace);
+        String middle = input.substring(firstSpace + 1); 
+        return middle + " " + firstWord;
+    }
 }

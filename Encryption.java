@@ -48,8 +48,6 @@ public static String str (String str){
         return middle + " " + firstWord;
     }
     public static String movingLetters(String str){
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
         int length1 = str.length();
         int d = str.indexOf(" ");
         int x = str.lastIndexOf(" ");

@@ -47,8 +47,7 @@ public static String str (String str){
         String middle = input.substring(firstSpace + 1); 
         return middle + " " + firstWord;
     }
-    class movingLetters{
-    public static void main(String [] args){
+    public static String movingLetters(String finalStr){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
         int length1 = str.length();
@@ -84,5 +83,5 @@ public static String str (String str){
            return;
         }
     }
-}   
+
 }

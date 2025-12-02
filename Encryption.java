@@ -46,7 +46,7 @@ public class Encryption
         str = str.replace('a' , '@');
         return str;
     }
-public static String str (String str){
+public static String replace1(String str){
         str = str.replace('@' , 'a');
         str = str.replace('0' , 'o');
         str = str.replace('#' , 'e');

@@ -119,6 +119,7 @@ public class EncryptionTester
             String result = Encryption.shiftLeft("i am saghi",3);
             assertEquals("am saghi i",result);
         }
+        @Test
             public void test21(){
             String result = Encryption.movingLetters("yakir papkin");
             assertEquals("kirpa pkinya",result);

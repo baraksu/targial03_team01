@@ -101,27 +101,27 @@ public class EncryptionTester
         }
             @Test 
         public void test16(){
-            String result = Encryption.replace("think");
+            String result = Encryption.shiftLeft("think");
             assertEquals("think",result);
         }
     @Test 
         public void test17(){
-            String result = Encryption.replace("banana tomato");
+            String result = Encryption.shiftLeft("banana tomato");
             assertEquals("tomato banana",result);
         }
     @Test 
         public void test18(){
-            String result = Encryption.replace("lets go hike");
+            String result = Encryption.shiftLeft("lets go hike");
             assertEquals("go hike lets",result);
         }
     @Test 
         public void test19(){
-            String result = Encryption.replace("whats up");
+            String result = Encryption.shiftLeft("whats up");
             assertEquals("up whats",result);
         }
     @Test 
         public void test20(){
-            String result = Encryption.replace("i am saghi");
+            String result = Encryption.shiftLeft("i am saghi");
             assertEquals("am saghi i",result);
         }
             public void test21(){
@@ -173,7 +173,7 @@ public class EncryptionTester
             String result = Encryption.shiftWordsRight("i am steve",3);
             assertEquals("steve i am",result);
         }
-        @Test 
+    @Test 
         public void test31(){
             String result = Encryption.charright("eitan azran");
             assertEquals("aneit anazr",result);

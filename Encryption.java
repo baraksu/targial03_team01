@@ -61,7 +61,7 @@ public static String str (String str){
         if (diff == 0){
            str = str.substring(1) + str.charAt(0);
            System.out.println(str);
-           return;
+           return str;
                 }
         if (diff == 1){
            str = str.substring(2) + str.charAt(0) + str.charAt(1);
@@ -69,7 +69,7 @@ public static String str (String str){
            String str2 = str.substring(d);
            String finalStr = str1 + " " + str2;
            System.out.println(finalStr);
-           return;
+           return finalStr;
         }
         if (diff == 2){
            str = str.substring(3) + str.charAt(0) + str.charAt(1) + str.charAt(2);
@@ -78,8 +78,9 @@ public static String str (String str){
            String str3 = str.substring(x);
            String finalStr = str1 + " " + str2 + " " + str3;
            System.out.println(finalStr);
-           return;
+           return finalStr;
         }
+        return str;
     }
 
 }

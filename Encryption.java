@@ -47,7 +47,7 @@ public static String str (String str){
         String middle = input.substring(firstSpace + 1); 
         return middle + " " + firstWord;
     }
-    public static String movingLetters(String finalStr){
+    public static String movingLetters(String str){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
         int length1 = str.length();

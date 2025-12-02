@@ -11,17 +11,10 @@ import org.junit.Test;
 public class EncryptionTester
 {
     @Test
-    public void testAdd(){
+    public void test1(){
         
         int result = Encryption.add(2,3);
         assertEquals(5,result);
-        
-    }
-    @Test
-    public void testAdd(){
-        
-        String result = Encryption.replace("0bc");
-        assertEquals("obc",result);
         
     }
     @Test

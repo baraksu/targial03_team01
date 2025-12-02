@@ -47,4 +47,42 @@ public static String str (String str){
         String middle = input.substring(firstSpace + 1); 
         return middle + " " + firstWord;
     }
+    class movingLetters{
+    public static void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        int length1 = str.length();
+        int d = str.indexOf(" ");
+        int x = str.lastIndexOf(" ");
+
+        str = str.replace("\\s+", " "); 
+        str = str.trim();
+        str = str.replace(" ", "");
+        int length = str.length();
+        int diff = length1 - length;
+        
+        if (diff == 0){
+           str = str.substring(1) + str.charAt(0);
+           System.out.println(str);
+           return;
+                }
+        if (diff == 1){
+           str = str.substring(2) + str.charAt(0) + str.charAt(1);
+           String str1 = str.substring(0,d);
+           String str2 = str.substring(d);
+           String finalStr = str1 + " " + str2;
+           System.out.println(finalStr);
+           return;
+        }
+        if (diff == 2){
+           str = str.substring(3) + str.charAt(0) + str.charAt(1) + str.charAt(2);
+           String str1 = str.substring(0,d);
+           String str2 = str.substring(d,x);
+           String str3 = str.substring(x);
+           String finalStr = str1 + " " + str2 + " " + str3;
+           System.out.println(finalStr);
+           return;
+        }
+    }
+}   
 }

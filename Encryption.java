@@ -27,7 +27,7 @@ public class Encryption
             return;
         }
     }
-  public static int countWords(String sentence) {
+  public static int countWords(String sentence) {//eytan zylberg
     if (sentence == null || sentence.isEmpty()) return 0;
     int firstSpace = sentence.indexOf(' ');
     if (firstSpace == -1) return 1;
@@ -38,7 +38,7 @@ public class Encryption
     System.out.println(sentence + " contains more than 3 words");
     return -1;
 }
-     public static String shiftWordsRight(String str , int senLength){ 
+     public static String shiftWordsRight(String str , int senLength){ //eytan zylberg
         if (senLength == 1)
             return str;
         else if (senLength == 2){

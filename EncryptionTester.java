@@ -12,38 +12,38 @@ public class EncryptionTester
 {
         
     
-    @Test
+   @Test
     public void test1(){
         
-        String result = Encryption.replace("0bc");
+        String result = Encryption.str("0bc");
         assertEquals("obc",result);
         
     }
     @Test
     public void test2(){
         
-        String result = Encryption.replace("@bc");
+        String result = Encryption.str("@bc");
         assertEquals("abc",result);
         
     }
     @Test
     public void test3(){
         
-        String result = Encryption.replace("#bc");
+        String result = Encryption.str("#bc");
         assertEquals("ebc",result);
         
     }
     @Test
     public void test4(){
         
-        String result = Encryption.replace("1bc");
+        String result = Encryption.str("1bc");
         assertEquals("ibc",result);
         
     }
     @Test
     public void test5(){
         
-        String result = Encryption.replace("&bc");
+        String result = Encryption.str("&bc");
         assertEquals("ubc",result);
         
     }
@@ -99,6 +99,30 @@ public class EncryptionTester
             String result = Encryption.replace("i am saghi");
             assertEquals("am saghi i",result);
         }
+            public void test21(){
+            String result = Encryption.movingLetters("yakir papkin");
+            assertEquals("kirpa pkinya",result);
+        }
+    @Test 
+        public void test22(){
+            String result = Encryption.movingLetters("eitan azran");
+            assertEquals("tanaz ranei",result);
+        }
+    @Test 
+        public void test23(){
+            String result = Encryption.movingLetters("test");
+            assertEquals("estt",result);
+        } 
+    @Test 
+        public void test24(){
+            String result = Encryption.movingLetters("zilberg");
+            assertEquals("ilbergz",result);
+        } 
+    @Test 
+        public void test25(){
+            String result = Encryption.movingLetters("shagi");
+            assertEquals("hagis",result);
+        } 
                            @Test 
         public void test26(){
             String result = Encryption.replace("");

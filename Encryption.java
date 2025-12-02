@@ -116,5 +116,44 @@ public static String str (String str){
         }
         return str;
     }
+    public static String charright(String str){
+
+    int first = str.indexOf(" ");
+    int last = str.lastIndexOf(" ");
+    str = str.replace("\\s+" , " ");
+    str = str.trim();
+    int length = str.length();
+    str = str.replace(" " , "");
+    int length1 = str.length();
+    int diff = length - length1; 
+    if  (diff == 0){
+        String str1 = str.substring(0 , length - 1);
+        char one = str.charAt(length - 1);
+        String finalStr = one + str1;
+        System.out.println(finalStr);
+        return finalStr;
+    }else if(diff == 1){
+        String str6 = str.substring(0 , length1 - 2);
+        String str5 = str.substring(length1 - 2);
+        String str1 = str5 + str6;
+        String str2 = str1.substring(0 , first);
+        String str3 = str1.substring(first);
+        String finalStr = str2 + " " + str3;
+        System.out.println(finalStr);
+        return finalStr;
+    }else if(diff == 2){
+        String str1 = str.substring(0 , length1 - 3);
+        String str2 = str.substring(length1 - 3);
+        String str3 = str2 + str1;
+        String str4 = str3.substring(0 , first);
+        String str5 = str3.substring(first , last);
+        String str6 = str3.substring(last);
+        String finalStr = str4 + " " + str5 + " " + str6;
+        System.out.println(finalStr);
+        return finalStr;
+    }
+    return str;
+}       
+    
 
 }

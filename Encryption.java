@@ -28,7 +28,7 @@ public class Encryption{
         }
     }
 
-    public static int countWords(String sentence){
+    public static int countWords(String sentence){//eytan zylberg
         if(sentence==null||sentence.trim().isEmpty())return 0;
         sentence=sentence.trim().replaceAll("\\s+"," ");
         int firstSpace=sentence.indexOf(' ');
@@ -41,7 +41,7 @@ public class Encryption{
         return -1;
     }
 
-    public static String shiftWordsRight(String str,int senLength){
+    public static String shiftWordsRight(String str,int senLength){//eytan zylberg
         str=str.trim().replaceAll("\\s+"," ");
         if(senLength==1)return str;
         if(senLength==2){

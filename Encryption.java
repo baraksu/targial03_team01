@@ -132,7 +132,7 @@ public static String shiftWordsLeft(String str, int senLength) {
         String str1 = str.substring(0 , length - 1);
         char one = str.charAt(length - 1);
         String finalStr = one + str1;
-        
+    
         return finalStr;
     }else if(diff == 1){
         String str6 = str.substring(0 , length1 - 2);

@@ -1,15 +1,8 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
+איתן	אזרן
+איתן	זילברג
+יונתן	שגיא
+יקיר	פפקין
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
 
 פפקין:שיטה להחלפ ת הסימנים באותיות התנוע ו (Vowels – (שיטה דומה והפוכה לשי טה
 מחליפה אותיות בסימנים..5 שיטה להזזת אותיות שמאלה – דומה לשיטה להזזת אותיות ימי נה

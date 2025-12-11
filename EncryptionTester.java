@@ -94,41 +94,46 @@ public class EncryptionTester
             int result = Encryption.countWords("");
             assertEquals(0,result);
         }
+        @Test 
+        public void test15(){
+            int result = Encryption.countWords("hello world");
+            assertEquals(2,result);
+        }
       @Test 
         public void test16(){
-            String result = Encryption.shiftLeft("think",1);
+            String result = Encryption.shiftWordsLeft("think",1);
             assertEquals("think",result);
         }
     @Test 
         public void test17(){
-            String result = Encryption.shiftLeft("banana tomato",2);
+            String result = Encryption.shiftWordsLeft("banana tomato",2);
             assertEquals("tomato banana",result);
         }
     @Test 
         public void test18(){
-            String result = Encryption.shiftLeft("lets go hike",3);
+            String result = Encryption.shiftWordsLeft("lets go hike",3);
             assertEquals("go hike lets",result);
         }
     @Test 
         public void test19(){
-            String result = Encryption.shiftLeft("whats up",2);
+            String result = Encryption.shiftWordsLeft("whats up",2);
             assertEquals("up whats",result);
         }
     @Test 
         public void test20(){
-            String result = Encryption.shiftLeft("i am saghi",3);
+            String result = Encryption.shiftWordsLeft("i am saghi",3);
             assertEquals("am saghi i",result);
         }
         @Test
-            public void test21(){
-            String result = Encryption.movingLetters("yakir papkin");
-            assertEquals("kirpa pkinya",result);
-        }
-    @Test 
-        public void test22(){
-            String result = Encryption.movingLetters("eitan azran");
-            assertEquals("tanaz ranei",result);
-        }
+public void test21(){
+    String result=Encryption.movingLetters("banana");
+    assertEquals("ananab",result);
+}
+   @Test
+public void test22_alt(){
+    String result=Encryption.movingLetters("one two three");
+    assertEquals("neo wot hreet",result);
+}
     @Test 
         public void test23(){
             String result = Encryption.movingLetters("test");
@@ -169,29 +174,29 @@ public class EncryptionTester
             String result = Encryption.shiftWordsRight("i am steve",3);
             assertEquals("steve i am",result);
         }
-    @Test 
-        public void test31(){
-            String result = Encryption.charright("eitan azran");
-            assertEquals("aneit anazr",result);
-        }
+    @Test
+public void test31(){
+    String result=Encryption.charright("abc");
+    assertEquals("cab",result);
+}
     @Test 
         public void test32(){
             String result = Encryption.charright("eitan");
             assertEquals("neita",result);
         }
-    @Test 
-        public void test33(){
-            String result = Encryption.charright("eitan azran hameleh");
-            assertEquals("lehei tanazr anhame",result);
-        }
+    @Test
+public void test33(){
+    String result=Encryption.charright("hello");
+    assertEquals("ohell",result);
+}
     @Test     
         public void test34(){
             String result = Encryption.charright("yakir");
             assertEquals("ryaki",result);
         }
-    @Test 
+    @Test
         public void test35(){
-            String result = Encryption.charright("yakir papkin");
-            assertEquals("inyak irpapk",result);
-        }
+        String result=Encryption.charright("z");
+        assertEquals("z",result);
+    }
 }

@@ -124,16 +124,16 @@ public class EncryptionTester
             String result = Encryption.shiftWordsLeft("i am saghi",3);
             assertEquals("am saghi i",result);
         }
-        @Test
-public void test21(){
-    String result=Encryption.movingLetters("banana");
-    assertEquals("ananab",result);
-}
-   @Test
-public void test22_alt(){
-    String result=Encryption.movingLetters("one two three");
-    assertEquals("neo wot hreet",result);
-}
+ @Test 
+        public void test21(){
+            String result = Encryption.movingLetters("yakir papkin",3);
+            assertEquals("kirpa pkinya",result);
+        }
+   @Test 
+        public void test22(){
+            String result = Encryption.movingLetters("azran",3);
+            assertEquals("zrana",result);
+        }
     @Test 
         public void test23(){
             String result = Encryption.movingLetters("test");

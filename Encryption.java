@@ -9,7 +9,6 @@ public class Encryption{
             System.out.println("Enter up to 3 words sentence");
             String str=reader.nextLine();
             int senLength=countWords(str);
-            if(senLength==-1)return;
             str=shiftWordsRight(str,senLength);
             str=charright(str);
             str=replace(str);
@@ -18,7 +17,6 @@ public class Encryption{
             System.out.println("sentence words 3 to up Enter");
             String str=reader.nextLine();
             int senLength=countWords(str);
-            if(senLength==-1)return;
             str=replace1(str);
             str=movingLetters(str);
             str=shiftWordsLeft(str,senLength);
@@ -64,49 +62,82 @@ public class Encryption{
     }
 
     public static String charright(String str){
-        str=str.trim().replaceAll("\\s+"," ");
-        int firstSpace=str.indexOf(" ");
-        int lastSpace=str.lastIndexOf(" ");
-        if(firstSpace==-1)return str.substring(str.length()-1)+str.substring(0,str.length()-1);
+        int length1 = str.length();
+        int d = str.indexOf(" ");
+        int x = str.lastIndexOf(" ");
 
-        if(lastSpace==firstSpace){
-            String word1=str.substring(0,firstSpace);
-            String word2=str.substring(firstSpace+1);
-            word1=word1.substring(word1.length()-1)+word1.substring(0,word1.length()-1);
-            word2=word2.substring(word2.length()-1)+word2.substring(0,word2.length()-1);
-            return word1+" "+word2;
+        str = str.replace("\\s+", " "); 
+        str = str.trim();
+        str = str.replace(" ", "");
+        int length = str.length();
+        int diff = length1 - length;
+        
+        
+        if(diff==0){
+        String str1 = str.substring(0 , length - 1);
+        char one = str.charAt(length - 1);
+        String finalStr = one + str1;
+        return finalStr;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+        }if(diff == 1){
+            String str1 = str.substring(0 , length - 2);
+            String str2 = str.substring(length - 2);
+            String str3 = str2 + str1;
+            String str4 = str3.substring(0 , d);
+            String str5 = str3.substring(d);
+            String finalStr = str4 + " " + str5;
+            return finalStr;
         }else{
-            String word1=str.substring(0,firstSpace);
-            String word2=str.substring(firstSpace+1,lastSpace);
-            String word3=str.substring(lastSpace+1);
-            word1=word1.substring(word1.length()-1)+word1.substring(0,word1.length()-1);
-            word2=word2.substring(word2.length()-1)+word2.substring(0,word2.length()-1);
-            word3=word3.substring(word3.length()-1)+word3.substring(0,word3.length()-1);
-            return word1+" "+word2+" "+word3;
+            String str1 = str.substring(0 , length - 3);
+            String str2 = str.substring(length - 3);
+            String str3 = str2 + str1;
+            String str4 = str3.substring(0 , d);
+            String str5 = str3.substring(d, x);
+            String str6 = str3.substring(x);
+            String finalStr = str4 + " " + str5 + " " + str6;
+            return finalStr;
         }
-    }
+
+        }
 
     public static String movingLetters(String str){
-        str=str.trim().replaceAll("\\s+"," ");
-        int firstSpace=str.indexOf(" ");
-        int lastSpace=str.lastIndexOf(" ");
-        if(firstSpace==-1)return str.substring(1)+str.charAt(0);
+        int length1 = str.length();
+        int d = str.indexOf(" ");
+        int x = str.lastIndexOf(" ");
 
-        if(lastSpace==firstSpace){
-            String word1=str.substring(0,firstSpace);
-            String word2=str.substring(firstSpace+1);
-            word1=word1.substring(1)+word1.charAt(0);
-            word2=word2.substring(1)+word2.charAt(0);
-            return word1+" "+word2;
-        }else{
-            String word1=str.substring(0,firstSpace);
-            String word2=str.substring(firstSpace+1,lastSpace);
-            String word3=str.substring(lastSpace+1);
-            word1=word1.substring(1)+word1.charAt(0);
-            word2=word2.substring(1)+word2.charAt(0);
-            word3=word3.substring(1)+word3.charAt(0);
-            return word1+" "+word2+" "+word3;
+        str = str.replace("\\s+", " "); 
+        str = str.trim();
+        str = str.replace(" ", "");
+        int length = str.length();
+        int diff = length1 - length;
+        
+        if (diff == 0){
+           str = str.substring(1) + str.charAt(0);
+           System.out.println(str);
+           return str;
+                }
+        if (diff == 1){
+           String str1 = str.substring(2); 
+           String str2 = str.substring(0 , 2);
+           String str3 = str1 + str2;
+           String str4 = str3.substring(0 ,d -1);
+           String str5 = str3.substring(d);
+           String finalStr = str3.charAt(0) + str4 + " " + str5;
+           System.out.println(finalStr);
+           return finalStr;
         }
+        if (diff == 2){
+           String str1 = str.substring(3); 
+           String str2 = str.substring(0 , 3);
+           String str3 = str1 + str2;
+           String str4 = str3.substring(0 , d);
+           String str5 = str3.substring(d  , x -2);
+           String str6 = str3.substring(x -2 );
+           String finalStr = str4 + " " + str5 + " " + str6;
+           System.out.println(finalStr);
+           return finalStr;
+        }
+        return str;
     }
 
     public static String replace(String str){

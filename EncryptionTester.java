@@ -126,12 +126,12 @@ public class EncryptionTester
         }
  @Test 
         public void test21(){
-            String result = Encryption.movingLetters("yakir papkin",3);
-            assertEquals("kirpa pkinya",result);
+            String result = Encryption.movingLetters("yakir papkin");
+            assertEquals("kir papkinya",result);
         }
    @Test 
         public void test22(){
-            String result = Encryption.movingLetters("azran",3);
+            String result = Encryption.movingLetters("azran");
             assertEquals("zrana",result);
         }
     @Test 

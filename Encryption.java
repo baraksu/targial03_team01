@@ -120,9 +120,9 @@ public class Encryption{
            String str1 = str.substring(2); 
            String str2 = str.substring(0 , 2);
            String str3 = str1 + str2;
-           String str4 = str3.substring(0 ,d -1);
+           String str4 = str3.substring(0 ,d );
            String str5 = str3.substring(d);
-           String finalStr = str3.charAt(0) + str4 + " " + str5;
+           String finalStr =  str4 + " " + str5;
            System.out.println(finalStr);
            return finalStr;
         }

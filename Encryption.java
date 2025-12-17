@@ -9,6 +9,10 @@ public class Encryption{
             System.out.println("Enter up to 3 words sentence");
             String str=reader.nextLine();
             int senLength=countWords(str);
+            if(senLength > 3){
+                System.out.println("Contains more than 3 words");
+                return;
+            }
             str=shiftWordsRight(str,senLength);
             str=charright(str);
             str=replace(str);
@@ -17,15 +21,19 @@ public class Encryption{
             System.out.println("sentence words 3 to up Enter");
             String str=reader.nextLine();
             int senLength=countWords(str);
+            if(senLength > 3){
+                System.out.println("Contains more than 3 words");
+                return;
+            }
             str=replace1(str);
-            str=movingLetters(str);
+            str = movingLetters(str,senLength);
             str=shiftWordsLeft(str,senLength);
             System.out.println("The decrypted sentence:"+str);
         }else{
             System.out.println(choose+" is not a valid choice");
         }
     }
-
+    
     public static int countWords(String sentence){//eytan zylberg
         if(sentence==null||sentence.trim().isEmpty())return 0;
         sentence=sentence.trim().replaceAll("\\s+"," ");
@@ -66,7 +74,7 @@ public class Encryption{
         int d = str.indexOf(" ");
         int x = str.lastIndexOf(" ");
 
-        str = str.replace("\\s+", " "); 
+        str = str.replaceAll("\\s+", " "); 
         str = str.trim();
         str = str.replace(" ", "");
         int length = str.length();
@@ -97,47 +105,44 @@ public class Encryption{
             String finalStr = str4 + " " + str5 + " " + str6;
             return finalStr;
         }
-
+        
         }
 
-    public static String movingLetters(String str){
-        int length1 = str.length();
-        int d = str.indexOf(" ");
-        int x = str.lastIndexOf(" ");
-
-        str = str.replace("\\s+", " "); 
-        str = str.trim();
-        str = str.replace(" ", "");
+    public static String movingLetters(String str, int senLength){
         int length = str.length();
-        int diff = length1 - length;
-        
-        if (diff == 0){
-           str = str.substring(1) + str.charAt(0);
-           System.out.println(str);
-           return str;
-                }
-        if (diff == 1){
+        int x = str.indexOf(" ");
+        int d = str.lastIndexOf(" ");
+        if (senLength == 1){
+            String str2 = str.substring(1);
+            String str1 = str.substring(0,1);
+            str = str2 + str1;
+            return str;
+        }
+        else if (senLength == 2){
+           str = str.replaceAll("\\s+", " "); 
+           str = str.trim();
+           str = str.replace(" ", "");
            String str1 = str.substring(2); 
            String str2 = str.substring(0 , 2);
            String str3 = str1 + str2;
-           String str4 = str3.substring(0 ,d );
-           String str5 = str3.substring(d);
-           String finalStr =  str4 + " " + str5;
-           System.out.println(finalStr);
-           return finalStr;
+           String str4 = str3.substring(0 ,x );
+           String str5 = str3.substring(x);
+           str =  str4 + " " + str5;
+           return str;
         }
-        if (diff == 2){
+        else{
+            str = str.replaceAll("\\s+", " ");
+           str = str.trim();
+           str = str.replace(" ", "");
            String str1 = str.substring(3); 
-           String str2 = str.substring(0 , 3);
+           String str2 = str.substring(0,3);
            String str3 = str1 + str2;
-           String str4 = str3.substring(0 , d);
-           String str5 = str3.substring(d  , x -2);
-           String str6 = str3.substring(x -2 );
-           String finalStr = str4 + " " + str5 + " " + str6;
-           System.out.println(finalStr);
-           return finalStr;
+           String str4 = str3.substring(0 , x);
+           String str5 = str3.substring(x, d -2);
+           String str6 = str3.substring(d -2 );
+           str = str4 + " "+ str5 + " " +str6;
+           return str;
         }
-        return str;
     }
 
     public static String replace(String str){

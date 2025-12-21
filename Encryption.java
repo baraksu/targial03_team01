@@ -14,7 +14,7 @@ public class Encryption{
                 return;
             }
             str=shiftWordsRight(str,senLength);
-            str=charright(str);
+            str=charright(str,senLength);
             str=replace(str);
             System.out.println("The encrypted sentence:"+str);
         }else if(choose==2){
@@ -69,41 +69,35 @@ public class Encryption{
         return str.substring(firstSpace+1)+" "+str.substring(0,firstSpace);
     }
 
-    public static String charright(String str){
-        int length1 = str.length();
-        int d = str.indexOf(" ");
-        int x = str.lastIndexOf(" ");
-
-        str = str.replaceAll("\\s+", " "); 
-        str = str.trim();
-        str = str.replace(" ", "");
+    public static String charright(String str, int senLength){
         int length = str.length();
-        int diff = length1 - length;
-        
-        
-        if(diff==0){
-        String str1 = str.substring(0 , length - 1);
-        char one = str.charAt(length - 1);
-        String finalStr = one + str1;
-        return finalStr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-        }if(diff == 1){
-            String str1 = str.substring(0 , length - 2);
-            String str2 = str.substring(length - 2);
-            String str3 = str2 + str1;
-            String str4 = str3.substring(0 , d);
-            String str5 = str3.substring(d);
-            String finalStr = str4 + " " + str5;
-            return finalStr;
-        }else{
-            String str1 = str.substring(0 , length - 3);
-            String str2 = str.substring(length - 3);
-            String str3 = str2 + str1;
-            String str4 = str3.substring(0 , d);
-            String str5 = str3.substring(d, x);
-            String str6 = str3.substring(x);
-            String finalStr = str4 + " " + str5 + " " + str6;
-            return finalStr;
+        int x = str.indexOf(" ");
+        int d = str.lastIndexOf(" ");
+        if (senLength == 1){
+            String str2 = str.substring(1);
+            String str1 = str.substring(0,1);
+            str = str1  + str2;
+            return str;
+        }
+        else if (senLength == 2){
+           str = str.replaceAll("\\s+", " "); 
+           str = str.trim();
+           String str1= str.substring(2); 
+           String str2 = str.substring(0 , 2);
+           String str3 =str2 + str1;
+           return str3;
+        }
+        else{
+            str = str.replaceAll("\\s+", " ");
+           str = str.trim();
+           String str1 = str.substring(4); 
+           String str2 = str.substring(0,4);
+           String str3 = str1 + str2;
+           String str4 = str3.substring(0 , x);
+           String str5 = str3.substring(x, d -3);
+           String str6 = str3.substring(d -3 );
+           str = str4 + " "+ str5 + " " +str6;
+           return str;
         }
         
         }
@@ -121,14 +115,10 @@ public class Encryption{
         else if (senLength == 2){
            str = str.replaceAll("\\s+", " "); 
            str = str.trim();
-           str = str.replace(" ", "");
            String str1 = str.substring(2); 
            String str2 = str.substring(0 , 2);
            String str3 = str1 + str2;
-           String str4 = str3.substring(0 ,x );
-           String str5 = str3.substring(x);
-           str =  str4 + " " + str5;
-           return str;
+           return str3;
         }
         else{
             str = str.replaceAll("\\s+", " ");

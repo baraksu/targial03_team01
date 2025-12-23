@@ -176,27 +176,27 @@ public class EncryptionTester
         }
     @Test
 public void test31(){
-    String result=Encryption.charright("abc");
+    String result=Encryption.charright("abc", 1);
     assertEquals("cab",result);
 }
     @Test 
         public void test32(){
-            String result = Encryption.charright("eitan");
+            String result = Encryption.charright("eitan" , 1);
             assertEquals("neita",result);
         }
     @Test
 public void test33(){
-    String result=Encryption.charright("hello");
+    String result=Encryption.charright("hello" , 1);
     assertEquals("ohell",result);
 }
     @Test     
         public void test34(){
-            String result = Encryption.charright("yakir");
+            String result = Encryption.charright("yakir" , 1);
             assertEquals("ryaki",result);
         }
     @Test
         public void test35(){
-        String result=Encryption.charright("z");
+        String result=Encryption.charright("z" , 1);
         assertEquals("z",result);
     }
 }

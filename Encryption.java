@@ -22,7 +22,7 @@ public class Encryption {
             String str = reader.nextLine();
             int senLength = countWords(str);
             if (senLength > 3) {
-                System.out.println("Contains more than 3 words");
+                System.out.println("Contains more than 3 words" );
                 return;
             }
             str = replace1(str);
@@ -42,7 +42,7 @@ public class Encryption {
     if (secondSpace == -1) return 2;
     int thirdSpace = sentence.indexOf(' ', secondSpace + 1);
     if (thirdSpace == -1) return 3;
-    return -1; 
+    return 4; 
 }
     public static String shiftWordsRight(String str, int diff) {
         str = str.trim().replaceAll("\\s+", " ");
